@@ -25,23 +25,20 @@
       html { scroll-padding-top: 6rem; }
       body {
         background-color: #09090b;
-        background-image: radial-gradient(ellipse 75% 38% at 50% -10%, rgba(161,161,170,.11), transparent 70%), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        background-image: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(90,110,150,.2), transparent 68%), radial-gradient(ellipse 45% 28% at 92% 38%, rgba(16,185,129,.07), transparent 75%), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
         background-size: auto, 48px 48px, 48px 48px;
         color: #fafafa;
       }
       ::selection { background: rgba(16,185,129,.35); color: #fff; }
-      .surface-card { background: rgba(17,17,20,.92); border: 1px solid #27272a; transition: border-color .2s ease, transform .2s ease, background .2s ease; }
-      .surface-card:hover { border-color: #3f3f46; }
+      .surface-card { background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.015) 48%), rgba(15,17,21,.58); border: 1px solid rgba(255,255,255,.12); -webkit-backdrop-filter: blur(22px) saturate(145%); backdrop-filter: blur(22px) saturate(145%); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 16px 48px rgba(0,0,0,.18); transition: border-color .25s ease, transform .25s ease, background .25s ease, box-shadow .25s ease; }
+      .surface-card:hover { border-color: rgba(255,255,255,.24); box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 22px 56px rgba(0,0,0,.28); }
       .mono-label { font-family: "JetBrains Mono", monospace; letter-spacing: -.025em; }
       .section-kicker { color: #10b981; font: 500 11px/1.5 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
       .status-pulse { box-shadow: 0 0 0 0 rgba(16,185,129,.6); animation: pulse 2s infinite; }
       @keyframes pulse { 70% { box-shadow: 0 0 0 7px rgba(16,185,129,0); } 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); } }
-      .preview-one { background: radial-gradient(ellipse at 75% 30%, rgba(176,143,107,.32), transparent 38%), linear-gradient(135deg,#171614,#29251f 55%,#111114); }
-      .preview-two { background: radial-gradient(ellipse at 50% 20%, rgba(16,185,129,.18), transparent 40%), linear-gradient(145deg,#101816,#17211e 55%,#111114); }
-      .preview-three { background: radial-gradient(ellipse at 70% 25%, rgba(99,102,241,.22), transparent 38%), linear-gradient(145deg,#12121a,#1b1b2b 55%,#111114); }
       .calendar-slot[aria-pressed="true"], .day-button[aria-pressed="true"] { border-color: #10b981; background: rgba(16,185,129,.12); color: #d1fae5; }
       .calendar-slot:focus-visible, .day-button:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #10b981; outline-offset: 3px; }
-      .input-field { background: #09090b; border: 1px solid #3f3f46; transition: border-color .2s ease; }
+      .input-field { background: rgba(9,9,11,.42); border: 1px solid rgba(255,255,255,.14); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: border-color .2s ease, background .2s ease; }
       .input-field:focus { border-color: #10b981; outline: none; }
       @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -49,7 +46,7 @@
     </style>
   </head>
   <body class="font-sans antialiased">
-    <header class="sticky top-0 z-50 border-b border-zinc-800/80 bg-carbon/90 backdrop-blur-xl">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/55 backdrop-blur-2xl">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8">
         <a href="#top" class="min-w-0" aria-label="Nathaniel Shatzkamer, back to top">
           <span class="mono-label block truncate text-[10px] font-semibold tracking-[-.04em] text-zinc-100 sm:text-xs">NATHANIEL SHATZKAMER <span class="text-zinc-600">//</span> FULL-STACK BUILD PARTNER</span>
@@ -57,7 +54,6 @@
         </a>
         <nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
           <a class="text-xs text-zinc-400 transition hover:text-white" href="#capabilities">Capabilities</a>
-          <a class="text-xs text-zinc-400 transition hover:text-white" href="#work">Selected Work</a>
           <a class="text-xs text-zinc-400 transition hover:text-white" href="#pipeline">Pipeline</a>
           <a class="text-xs text-zinc-400 transition hover:text-white" href="#pricing">Wholesale Rates</a>
         </nav>
@@ -116,32 +112,9 @@
         </div>
       </section>
 
-      <section id="work" class="border-t border-zinc-900">
-        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div class="mb-10"><p class="section-kicker">02 / Selected Work</p><div class="mt-3 flex flex-wrap items-end justify-between gap-3"><h2 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A few builds from the stack.</h2><span class="mono-label text-[10px] text-zinc-600">SELECTED PRODUCTION WORK / 2026</span></div></div>
-          <div class="grid gap-4 lg:grid-cols-3">
-            <article class="surface-card flex flex-col overflow-hidden rounded-lg">
-              <div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-950/70 px-4 py-3"><span class="h-2 w-2 rounded-full bg-red-500/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-emerald-500/70"></span><div class="mono-label ml-3 min-w-0 flex-1 truncate rounded bg-zinc-900 px-3 py-1.5 text-[9px] text-zinc-500">valenzistudio.com <span class="text-zinc-700">//</span> Custom E-Commerce Architecture</div></div>
-              <div class="preview-one relative flex h-48 items-end overflow-hidden p-5"><span class="absolute right-7 top-5 h-28 w-20 rotate-[-13deg] border border-stone-300/25 bg-black/20 shadow-2xl"></span><span class="absolute right-16 top-9 h-24 w-16 rotate-[10deg] border border-stone-200/20 bg-stone-400/10"></span><div class="relative"><span class="mono-label text-[9px] tracking-[.2em] text-stone-300/70">VALENZI / FORM 001</span><p class="mt-2 text-2xl font-semibold tracking-[-.06em] text-stone-100">BUILT TO MOVE.</p></div></div>
-              <div class="flex flex-1 flex-col p-5"><h3 class="text-base font-semibold tracking-[-.03em]">Project 01: Valenzi Studio — Custom DTC Streetwear Storefront</h3><div class="mt-4 flex flex-wrap gap-1.5"><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">0.7s Load Time</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Custom Cart &amp; Drop Flow</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Zero Template Bloat</span></div><p class="mt-4 flex-1 text-sm leading-6 text-zinc-400">Minimalist industrial techwear and streetwear storefront engineered from scratch for high-conversion social traffic, custom domain/email routing, and instant mobile checkout.</p><a href="#intake" class="mt-5 inline-flex items-center gap-2 border-t border-zinc-800 pt-4 text-xs font-medium text-zinc-200 transition hover:text-emerald-300">View Live Architecture <span aria-hidden="true">↗</span></a></div>
-            </article>
-            <article class="surface-card flex flex-col overflow-hidden rounded-lg">
-              <div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-950/70 px-4 py-3"><span class="h-2 w-2 rounded-full bg-red-500/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-emerald-500/70"></span><div class="mono-label ml-3 min-w-0 flex-1 truncate rounded bg-zinc-900 px-3 py-1.5 text-[9px] text-zinc-500">client-campaign <span class="text-zinc-700">//</span> High-Converting Lead Engine</div></div>
-              <div class="preview-two relative flex h-48 items-center justify-center overflow-hidden p-5"><div class="w-4/5 rounded-lg border border-emerald-100/15 bg-zinc-950/70 p-4 shadow-2xl backdrop-blur"><div class="mono-label text-[8px] tracking-[.15em] text-emerald-300">LOCAL / GROWTH</div><p class="mt-3 max-w-[190px] text-xl font-semibold leading-tight tracking-[-.05em]">Your next customer is right around the corner.</p><div class="mt-4 h-7 w-24 rounded bg-emerald-400"></div></div></div>
-              <div class="flex flex-1 flex-col p-5"><h3 class="text-base font-semibold tracking-[-.03em]">Project 02: Local Radius Paid-Ad &amp; Conversion Funnel</h3><div class="mt-4 flex flex-wrap gap-1.5"><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Built in 36 Hours</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Meta Pixel + CAPI</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Mobile-First UI</span></div><p class="mt-4 flex-1 text-sm leading-6 text-zinc-400">Dedicated paid-social landing page and local radius conversion funnel built to turn cold ad clicks into tracked, high-ticket client bookings.</p><a href="#intake" class="mt-5 inline-flex items-center gap-2 border-t border-zinc-800 pt-4 text-xs font-medium text-zinc-200 transition hover:text-emerald-300">View Funnel Spec <span aria-hidden="true">↗</span></a></div>
-            </article>
-            <article class="surface-card flex flex-col overflow-hidden rounded-lg">
-              <div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-950/70 px-4 py-3"><span class="h-2 w-2 rounded-full bg-red-500/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-emerald-500/70"></span><div class="mono-label ml-3 min-w-0 flex-1 truncate rounded bg-zinc-900 px-3 py-1.5 text-[9px] text-zinc-500">streamstate-core <span class="text-zinc-700">//</span> Low-Latency Architecture</div></div>
-              <div class="preview-three relative flex h-48 items-center justify-center overflow-hidden p-5"><div class="w-full rounded-lg border border-indigo-200/15 bg-[#0b0b12]/90 p-4 font-mono shadow-2xl"><div class="mb-4 flex items-center justify-between text-[8px] text-zinc-500"><span>STREAM / CORE</span><span class="text-emerald-400">● SYSTEM ONLINE</span></div><div class="flex h-16 items-end gap-1.5"><span class="h-7 flex-1 rounded-t bg-indigo-400/30"></span><span class="h-10 flex-1 rounded-t bg-indigo-400/40"></span><span class="h-8 flex-1 rounded-t bg-indigo-400/50"></span><span class="h-14 flex-1 rounded-t bg-indigo-300/70"></span><span class="h-11 flex-1 rounded-t bg-indigo-400/50"></span><span class="h-16 flex-1 rounded-t bg-indigo-300/80"></span><span class="h-12 flex-1 rounded-t bg-indigo-400/40"></span><span class="h-14 flex-1 rounded-t bg-indigo-300/60"></span></div></div></div>
-              <div class="flex flex-1 flex-col p-5"><h3 class="text-base font-semibold tracking-[-.03em]">Project 03: StreamState Core — High-Performance Systems &amp; Web UI</h3><div class="mt-4 flex flex-wrap gap-1.5"><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Python &amp; Modern Web Stack</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Real-Time Benchmarks</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Clean UI</span></div><p class="mt-4 flex-1 text-sm leading-6 text-zinc-400">Performance-engineered software architecture and clean technical dashboard UI demonstrating deep full-stack and systems capability.</p><a href="#intake" class="mt-5 inline-flex items-center gap-2 border-t border-zinc-800 pt-4 text-xs font-medium text-zinc-200 transition hover:text-emerald-300">View Technical Breakdown <span aria-hidden="true">↗</span></a></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="pipeline" class="border-t border-zinc-900 bg-zinc-950/35">
         <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div class="mb-10"><p class="section-kicker">03 / The No-Meeting Handoff Pipeline</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A clean handoff. No calendar ping-pong.</h2></div>
+          <div class="mb-10"><p class="section-kicker">02 / The No-Meeting Handoff Pipeline</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A clean handoff. No calendar ping-pong.</h2></div>
           <div class="grid gap-3 md:grid-cols-3">
             <article class="surface-card rounded-lg p-6"><span class="mono-label text-[10px] text-emerald-400">STEP 01 // Drop the Spec (3 Mins)</span><h3 class="mt-7 text-lg font-semibold tracking-[-.04em]">Send the essentials.</h3><p class="mt-3 text-sm leading-6 text-zinc-400">Send over your client's brand assets, Figma file (or 2 reference sites), and target launch date. No 2-hour discovery calls required.</p></article>
             <article class="surface-card rounded-lg p-6"><span class="mono-label text-[10px] text-emerald-400">STEP 02 // 48-Hour Staging Link</span><h3 class="mt-7 text-lg font-semibold tracking-[-.04em]">Review a real build.</h3><p class="mt-3 text-sm leading-6 text-zinc-400">I spin up the custom build on a private staging URL and record a quick walkthrough within 48–72 hours for rapid revisions.</p></article>
@@ -152,7 +125,7 @@
 
       <section id="pricing" class="border-t border-zinc-900">
         <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div class="mb-10"><p class="section-kicker">04 / Transparent Wholesale Rates</p><div class="mt-3 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><h2 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">Clear cost. Room to grow.</h2><p class="max-w-md text-sm leading-6 text-zinc-500">Flat partner pricing lets you scope confidently, protect your margin, and deliver without adding a full-time developer.</p></div></div>
+          <div class="mb-10"><p class="section-kicker">03 / Transparent Wholesale Rates</p><div class="mt-3 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><h2 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">Clear cost. Room to grow.</h2><p class="max-w-md text-sm leading-6 text-zinc-500">Flat partner pricing lets you scope confidently, protect your margin, and deliver without adding a full-time developer.</p></div></div>
           <div class="surface-card rounded-xl p-5 sm:p-7">
             <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start"><div><p class="mono-label text-[10px] font-medium tracking-[.1em] text-zinc-300">AGENCY MARKUP CALCULATOR</p><p class="mt-2 text-xs text-zinc-500">Estimate monthly margin at a 2.5×–3× agency markup.</p></div><span class="mono-label text-[9px] text-zinc-600">BASED ON $1,500 FULL 5-PAGE SITE</span></div>
             <div class="mt-6 grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
@@ -186,14 +159,14 @@
 
       <section id="intake" class="border-t border-zinc-900 bg-zinc-950/35">
         <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div class="mb-10 max-w-2xl"><p class="section-kicker">05 / Partner Intake</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A fast intro or a build-ready brief.</h2><p class="mt-4 text-sm leading-6 text-zinc-500">Choose a time to connect, or send the essentials directly. This visual preview is frontend-only and does not transmit or store your information.</p></div>
+          <div class="mb-10 max-w-2xl"><p class="section-kicker">04 / Partner Connection</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A fast intro or a build-ready brief.</h2><p class="mt-4 text-sm leading-6 text-zinc-500">Choose a time to connect, or preview a build-ready brief. This frontend-only form does not transmit or store your information.</p></div>
           <div class="grid gap-4 lg:grid-cols-2">
             <section class="surface-card rounded-xl p-5 sm:p-7" aria-labelledby="calendar-title">
               <div class="flex items-start justify-between gap-4"><div><p class="mono-label text-[9px] tracking-[.1em] text-emerald-400">10-MIN PARTNER INTRO — VISUAL CALENDAR UI</p><h3 id="calendar-title" class="mt-3 text-lg font-semibold tracking-[-.04em]">Nathaniel Shatzkamer — 15-Min White-Label Partner Intro</h3></div><span class="mono-label shrink-0 rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-500">EST</span></div>
               <p class="mt-2 text-xs text-zinc-500">Pick a weekday and a time that works for you.</p>
               <div class="mt-6"><p class="mono-label mb-3 text-[9px] tracking-[.08em] text-zinc-500">SELECT A DAY</p><div class="grid grid-cols-5 gap-2" role="group" aria-label="Select a weekday"><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="true">Mon</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Tue</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Wed</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Thu</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Fri</button></div></div>
               <div class="mt-6"><p class="mono-label mb-3 text-[9px] tracking-[.08em] text-zinc-500">AVAILABLE TIMES</p><div class="grid gap-2 sm:grid-cols-3" role="group" aria-label="Select a time"><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">10:00 AM EST</button><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">1:30 PM EST</button><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">4:00 PM EST</button></div></div>
-              <p id="calendar-selection" class="mono-label mt-5 min-h-5 text-[10px] text-zinc-500" aria-live="polite">No time selected yet.</p><p class="mt-3 border-t border-zinc-800 pt-4 text-[10px] leading-5 text-zinc-600">Booking preview only. No appointment is reserved by selecting a slot.</p>
+              <p id="calendar-selection" class="mono-label mt-5 min-h-5 text-[10px] text-zinc-500" aria-live="polite">No time selected yet.</p><p class="mt-3 border-t border-zinc-800 pt-4 text-[10px] leading-5 text-zinc-600">A selected time is included in the Gmail draft only. No appointment is reserved.</p>
             </section>
             <section class="surface-card rounded-xl p-5 sm:p-7" aria-labelledby="spec-title">
               <p class="mono-label text-[9px] tracking-[.1em] text-emerald-400">DIRECT BUILD SPEC SHEET — VISUAL INTAKE UI</p><h3 id="spec-title" class="mt-3 text-lg font-semibold tracking-[-.04em]">Tell me what you're building.</h3>
