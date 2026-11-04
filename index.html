@@ -24,14 +24,17 @@
       :root { color-scheme: dark; }
       html { scroll-padding-top: 6rem; }
       body {
+        position: relative;
+        isolation: isolate;
         background-color: #09090b;
-        background-image: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(90,110,150,.2), transparent 68%), radial-gradient(ellipse 45% 28% at 92% 38%, rgba(16,185,129,.07), transparent 75%), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-        background-size: auto, 48px 48px, 48px 48px;
+        background-image: radial-gradient(ellipse 80% 45% at 50% -8%, rgba(81,103,166,.32), transparent 70%), radial-gradient(ellipse 58% 42% at 100% 32%, rgba(67,56,202,.2), transparent 72%), radial-gradient(ellipse 55% 40% at 0% 64%, rgba(8,145,178,.15), transparent 70%), linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+        background-size: auto, auto, auto, 48px 48px, 48px 48px;
         color: #fafafa;
       }
+      body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse 34rem 28rem at 12% 18%, rgba(59,130,246,.11), transparent 72%), radial-gradient(ellipse 30rem 34rem at 88% 55%, rgba(139,92,246,.1), transparent 74%); }
       ::selection { background: rgba(16,185,129,.35); color: #fff; }
-      .surface-card { background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.015) 48%), rgba(15,17,21,.58); border: 1px solid rgba(255,255,255,.12); -webkit-backdrop-filter: blur(22px) saturate(145%); backdrop-filter: blur(22px) saturate(145%); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 16px 48px rgba(0,0,0,.18); transition: border-color .25s ease, transform .25s ease, background .25s ease, box-shadow .25s ease; }
-      .surface-card:hover { border-color: rgba(255,255,255,.24); box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 22px 56px rgba(0,0,0,.28); }
+      .surface-card { background: linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.035) 42%, rgba(129,140,248,.045)), rgba(24,28,40,.64); border: 1px solid rgba(203,213,255,.24); -webkit-backdrop-filter: blur(30px) saturate(180%); backdrop-filter: blur(30px) saturate(180%); box-shadow: inset 0 1px 0 rgba(255,255,255,.18), inset 0 -1px 0 rgba(255,255,255,.035), 0 18px 56px rgba(0,0,0,.28); transition: border-color .25s ease, transform .25s ease, background .25s ease, box-shadow .25s ease; }
+      .surface-card:hover { border-color: rgba(203,213,255,.42); background-color: rgba(31,36,52,.72); box-shadow: inset 0 1px 0 rgba(255,255,255,.24), 0 24px 64px rgba(0,0,0,.34), 0 0 36px rgba(99,102,241,.08); }
       .mono-label { font-family: "JetBrains Mono", monospace; letter-spacing: -.025em; }
       .section-kicker { color: #10b981; font: 500 11px/1.5 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
       .status-pulse { box-shadow: 0 0 0 0 rgba(16,185,129,.6); animation: pulse 2s infinite; }
@@ -46,7 +49,7 @@
     </style>
   </head>
   <body class="font-sans antialiased">
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/55 backdrop-blur-2xl">
+    <header class="sticky top-0 z-50 border-b border-white/20 bg-[linear-gradient(110deg,rgba(17,24,39,.88),rgba(17,17,27,.64))] shadow-[0_8px_32px_rgba(0,0,0,.22)] backdrop-blur-2xl">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8">
         <a href="#top" class="min-w-0" aria-label="Nathaniel Shatzkamer, back to top">
           <span class="mono-label block truncate text-[10px] font-semibold tracking-[-.04em] text-zinc-100 sm:text-xs">NATHANIEL SHATZKAMER <span class="text-zinc-600">//</span> FULL-STACK BUILD PARTNER</span>
@@ -166,7 +169,7 @@
               <p class="mt-2 text-xs text-zinc-500">Pick a weekday and a time that works for you.</p>
               <div class="mt-6"><p class="mono-label mb-3 text-[9px] tracking-[.08em] text-zinc-500">SELECT A DAY</p><div class="grid grid-cols-5 gap-2" role="group" aria-label="Select a weekday"><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="true">Mon</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Tue</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Wed</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Thu</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Fri</button></div></div>
               <div class="mt-6"><p class="mono-label mb-3 text-[9px] tracking-[.08em] text-zinc-500">AVAILABLE TIMES</p><div class="grid gap-2 sm:grid-cols-3" role="group" aria-label="Select a time"><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">10:00 AM EST</button><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">1:30 PM EST</button><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">4:00 PM EST</button></div></div>
-              <p id="calendar-selection" class="mono-label mt-5 min-h-5 text-[10px] text-zinc-500" aria-live="polite">No time selected yet.</p><p class="mt-3 border-t border-zinc-800 pt-4 text-[10px] leading-5 text-zinc-600">A selected time is included in the Gmail draft only. No appointment is reserved.</p>
+              <p id="calendar-selection" class="mono-label mt-5 min-h-5 text-[10px] text-zinc-500" aria-live="polite">No time selected yet.</p><p class="mt-3 border-t border-zinc-800 pt-4 text-[10px] leading-5 text-zinc-600">Selection is a visual preview only. No appointment is reserved.</p>
             </section>
             <section class="surface-card rounded-xl p-5 sm:p-7" aria-labelledby="spec-title">
               <p class="mono-label text-[9px] tracking-[.1em] text-emerald-400">DIRECT BUILD SPEC SHEET — VISUAL INTAKE UI</p><h3 id="spec-title" class="mt-3 text-lg font-semibold tracking-[-.04em]">Tell me what you're building.</h3>
