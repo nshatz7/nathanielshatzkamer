@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090b">
+    <meta name="description" content="Nathaniel Shatzkamer is a high-speed, white-label full-stack development partner for marketing, PR, and paid-ad agencies. Custom builds. Flat wholesale rates.">
+    <title>Nathaniel Shatzkamer — White-Label Full-Stack Build Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { carbon: "#09090B", surface: "#111114", line: "#27272A", zinc: "#A1A1AA", emerald: "#10B981" },
+            fontFamily: { sans: ["Inter", "sans-serif"], mono: ["JetBrains Mono", "monospace"] }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root { color-scheme: dark; }
+      html { scroll-padding-top: 6rem; }
+      body {
+        background-color: #09090b;
+        background-image: radial-gradient(ellipse 75% 38% at 50% -10%, rgba(161,161,170,.11), transparent 70%), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        background-size: auto, 48px 48px, 48px 48px;
+        color: #fafafa;
+      }
+      ::selection { background: rgba(16,185,129,.35); color: #fff; }
+      .surface-card { background: rgba(17,17,20,.92); border: 1px solid #27272a; transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+      .surface-card:hover { border-color: #3f3f46; }
+      .mono-label { font-family: "JetBrains Mono", monospace; letter-spacing: -.025em; }
+      .section-kicker { color: #10b981; font: 500 11px/1.5 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
+      .status-pulse { box-shadow: 0 0 0 0 rgba(16,185,129,.6); animation: pulse 2s infinite; }
+      @keyframes pulse { 70% { box-shadow: 0 0 0 7px rgba(16,185,129,0); } 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); } }
+      .preview-one { background: radial-gradient(ellipse at 75% 30%, rgba(176,143,107,.32), transparent 38%), linear-gradient(135deg,#171614,#29251f 55%,#111114); }
+      .preview-two { background: radial-gradient(ellipse at 50% 20%, rgba(16,185,129,.18), transparent 40%), linear-gradient(145deg,#101816,#17211e 55%,#111114); }
+      .preview-three { background: radial-gradient(ellipse at 70% 25%, rgba(99,102,241,.22), transparent 38%), linear-gradient(145deg,#12121a,#1b1b2b 55%,#111114); }
+      .calendar-slot[aria-pressed="true"], .day-button[aria-pressed="true"] { border-color: #10b981; background: rgba(16,185,129,.12); color: #d1fae5; }
+      .calendar-slot:focus-visible, .day-button:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #10b981; outline-offset: 3px; }
+      .input-field { background: #09090b; border: 1px solid #3f3f46; transition: border-color .2s ease; }
+      .input-field:focus { border-color: #10b981; outline: none; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased">
+    <header class="sticky top-0 z-50 border-b border-zinc-800/80 bg-carbon/90 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8">
+        <a href="#top" class="min-w-0" aria-label="Nathaniel Shatzkamer, back to top">
+          <span class="mono-label block truncate text-[10px] font-semibold tracking-[-.04em] text-zinc-100 sm:text-xs">NATHANIEL SHATZKAMER <span class="text-zinc-600">//</span> FULL-STACK BUILD PARTNER</span>
+          <span class="mono-label mt-1 block text-[9px] tracking-[.1em] text-zinc-500">BOSTON / MA</span>
+        </a>
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+          <a class="text-xs text-zinc-400 transition hover:text-white" href="#capabilities">Capabilities</a>
+          <a class="text-xs text-zinc-400 transition hover:text-white" href="#work">Selected Work</a>
+          <a class="text-xs text-zinc-400 transition hover:text-white" href="#pipeline">Pipeline</a>
+          <a class="text-xs text-zinc-400 transition hover:text-white" href="#pricing">Wholesale Rates</a>
+        </nav>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="hidden items-center gap-2 rounded-full border border-emerald-900/80 bg-emerald-950/40 px-3 py-1.5 text-[10px] font-medium text-emerald-300 sm:inline-flex"><span class="status-pulse h-1.5 w-1.5 rounded-full bg-emerald-400"></span>2 Agency Partner Slots Open</span>
+          <a href="#intake" class="rounded-md bg-white px-3 py-2 text-[11px] font-semibold text-black transition hover:bg-zinc-200 sm:px-4 sm:text-xs">Assign a Build <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="mx-auto max-w-7xl px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24 lg:pt-28">
+        <div class="mx-auto max-w-5xl">
+          <div class="mb-7 inline-flex max-w-full items-center gap-2 rounded-full border border-zinc-800 bg-zinc-950/70 px-3 py-2">
+            <span class="mono-label shrink-0 text-[10px]" aria-hidden="true">🟢</span>
+            <span class="mono-label truncate text-[9px] font-medium tracking-[.045em] text-zinc-300 sm:text-[10px]">NATHANIELSHATZKAMER.COM — AVAILABLE FOR AGENCY OVERFLOW &amp; WHITE-LABEL BUILDS</span>
+          </div>
+          <h1 class="max-w-4xl text-4xl font-semibold leading-[1.07] tracking-[-.055em] text-white sm:text-6xl lg:text-7xl">Your Agency’s Silent, 48-Hour Full-Stack Developer.</h1>
+          <p class="mt-7 max-w-3xl text-base leading-7 text-zinc-400 sm:text-lg sm:leading-8">I’m Nathaniel Shatzkamer. I build ultra-fast custom landing pages, web apps, and DTC storefronts at flat wholesale rates—so your agency can launch client campaigns faster and keep 60%+ profit margins without hiring in-house devs.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#pricing" class="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3.5 text-sm font-semibold text-black transition hover:bg-zinc-200">View Wholesale Rates &amp; Margins <svg aria-hidden="true" viewBox="0 0 16 16" class="h-4 w-4 fill-none stroke-current" stroke-width="1.5"><path d="M8 2.5v10M4.5 9 8 12.5 11.5 9"/></svg></a>
+            <a href="#intake" class="inline-flex items-center justify-center gap-2 rounded-md border border-zinc-700 bg-zinc-900/80 px-5 py-3.5 text-sm font-medium text-zinc-200 transition hover:border-zinc-500 hover:bg-zinc-800">Preview Spec Sheet UI <svg aria-hidden="true" viewBox="0 0 16 16" class="h-4 w-4 fill-none stroke-current" stroke-width="1.5"><path d="M5 11 11 5M5.5 5H11v5.5"/></svg></a>
+          </div>
+          <div class="surface-card mt-14 overflow-hidden rounded-xl sm:mt-16">
+            <div class="flex items-center justify-between border-b border-zinc-800 px-4 py-3 sm:px-5">
+              <span class="mono-label text-[10px] text-zinc-500">DELIVERY COMPARISON <span class="text-zinc-700">//</span> THE BUILD PARTNER ADVANTAGE</span><span class="mono-label text-[9px] text-zinc-600">01 / 02</span>
+            </div>
+            <div class="grid divide-y divide-zinc-800 md:grid-cols-2 md:divide-x md:divide-y-0">
+              <div class="p-5 sm:p-7">
+                <div class="mb-5 flex items-center gap-2"><span class="flex h-7 w-7 items-center justify-center rounded-md bg-zinc-800 text-xs text-zinc-500">×</span><span class="mono-label text-[10px] font-medium text-zinc-400">TYPICAL FREELANCE DEVS</span></div>
+                <p class="text-lg font-medium tracking-[-.03em] text-zinc-300">3–4 Week Delays</p>
+                <div class="mt-4 flex flex-wrap gap-2"><span class="rounded border border-zinc-800 bg-zinc-950 px-2.5 py-1.5 text-[10px] text-zinc-500">Bloated Templates</span><span class="rounded border border-zinc-800 bg-zinc-950 px-2.5 py-1.5 text-[10px] text-zinc-500">Missed Deadlines</span></div>
+              </div>
+              <div class="bg-emerald-950/[.10] p-5 sm:p-7">
+                <div class="mb-5 flex items-center gap-2"><span class="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-500/10 text-xs text-emerald-400">✓</span><span class="mono-label text-[10px] font-medium text-emerald-300">WORKING WITH NATHANIEL</span></div>
+                <p class="text-lg font-medium tracking-[-.03em] text-white">48–120 Hour Turnaround</p>
+                <div class="mt-4 flex flex-wrap gap-2"><span class="rounded border border-emerald-900/70 bg-emerald-950/30 px-2.5 py-1.5 text-[10px] text-emerald-200">99/100 Lighthouse Speed</span><span class="rounded border border-emerald-900/70 bg-emerald-950/30 px-2.5 py-1.5 text-[10px] text-emerald-200">Custom Code &amp; Pixel/CAPI Ready</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" class="border-t border-zinc-900 bg-zinc-950/35">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div><p class="section-kicker">01 / Technical Edge</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">Built for speed. Designed for handoff.</h2></div>
+            <p class="max-w-sm text-sm leading-6 text-zinc-500">Direct engineering, production-ready tracking, and a clean white-label experience your clients never have to think about.</p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="surface-card rounded-lg p-5"><span class="mono-label text-[10px] text-emerald-400">01 //</span><h3 class="mt-8 text-base font-semibold tracking-[-.03em]">Sub-Second Custom Code</h3><p class="mt-3 text-sm leading-6 text-zinc-400">No bloated page builders. I ship clean, lightweight frontends that load in under 0.8s and immediately lower your clients' Meta &amp; TikTok ad CPA.</p></article>
+            <article class="surface-card rounded-lg p-5"><span class="mono-label text-[10px] text-emerald-400">02 //</span><h3 class="mt-8 text-base font-semibold tracking-[-.03em]">100% Ghost White-Label</h3><p class="mt-3 text-sm leading-6 text-zinc-400">Strict confidentiality. I can hop in your Slack/Zoom wearing your agency's hat, or stay completely invisible behind the scenes.</p></article>
+            <article class="surface-card rounded-lg p-5"><span class="mono-label text-[10px] text-emerald-400">03 //</span><h3 class="mt-8 text-base font-semibold tracking-[-.03em]">Pixel &amp; Conversion Ready</h3><p class="mt-3 text-sm leading-6 text-zinc-400">Every client build ships with Meta Pixel, Conversions API, GA4, and CRM webhooks structured and ready to fire.</p></article>
+            <article class="surface-card rounded-lg p-5"><span class="mono-label text-[10px] text-emerald-400">04 //</span><h3 class="mt-8 text-base font-semibold tracking-[-.03em]">Direct Builder Access</h3><p class="mt-3 text-sm leading-6 text-zinc-400">Zero account managers or middleman agency bloat. You send the spec directly to me, and I write the code.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="border-t border-zinc-900">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="mb-10"><p class="section-kicker">02 / Selected Work</p><div class="mt-3 flex flex-wrap items-end justify-between gap-3"><h2 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A few builds from the stack.</h2><span class="mono-label text-[10px] text-zinc-600">SELECTED PRODUCTION WORK / 2026</span></div></div>
+          <div class="grid gap-4 lg:grid-cols-3">
+            <article class="surface-card flex flex-col overflow-hidden rounded-lg">
+              <div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-950/70 px-4 py-3"><span class="h-2 w-2 rounded-full bg-red-500/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-emerald-500/70"></span><div class="mono-label ml-3 min-w-0 flex-1 truncate rounded bg-zinc-900 px-3 py-1.5 text-[9px] text-zinc-500">valenzistudio.com <span class="text-zinc-700">//</span> Custom E-Commerce Architecture</div></div>
+              <div class="preview-one relative flex h-48 items-end overflow-hidden p-5"><span class="absolute right-7 top-5 h-28 w-20 rotate-[-13deg] border border-stone-300/25 bg-black/20 shadow-2xl"></span><span class="absolute right-16 top-9 h-24 w-16 rotate-[10deg] border border-stone-200/20 bg-stone-400/10"></span><div class="relative"><span class="mono-label text-[9px] tracking-[.2em] text-stone-300/70">VALENZI / FORM 001</span><p class="mt-2 text-2xl font-semibold tracking-[-.06em] text-stone-100">BUILT TO MOVE.</p></div></div>
+              <div class="flex flex-1 flex-col p-5"><h3 class="text-base font-semibold tracking-[-.03em]">Project 01: Valenzi Studio — Custom DTC Streetwear Storefront</h3><div class="mt-4 flex flex-wrap gap-1.5"><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">0.7s Load Time</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Custom Cart &amp; Drop Flow</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Zero Template Bloat</span></div><p class="mt-4 flex-1 text-sm leading-6 text-zinc-400">Minimalist industrial techwear and streetwear storefront engineered from scratch for high-conversion social traffic, custom domain/email routing, and instant mobile checkout.</p><a href="#intake" class="mt-5 inline-flex items-center gap-2 border-t border-zinc-800 pt-4 text-xs font-medium text-zinc-200 transition hover:text-emerald-300">View Live Architecture <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="surface-card flex flex-col overflow-hidden rounded-lg">
+              <div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-950/70 px-4 py-3"><span class="h-2 w-2 rounded-full bg-red-500/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-emerald-500/70"></span><div class="mono-label ml-3 min-w-0 flex-1 truncate rounded bg-zinc-900 px-3 py-1.5 text-[9px] text-zinc-500">client-campaign <span class="text-zinc-700">//</span> High-Converting Lead Engine</div></div>
+              <div class="preview-two relative flex h-48 items-center justify-center overflow-hidden p-5"><div class="w-4/5 rounded-lg border border-emerald-100/15 bg-zinc-950/70 p-4 shadow-2xl backdrop-blur"><div class="mono-label text-[8px] tracking-[.15em] text-emerald-300">LOCAL / GROWTH</div><p class="mt-3 max-w-[190px] text-xl font-semibold leading-tight tracking-[-.05em]">Your next customer is right around the corner.</p><div class="mt-4 h-7 w-24 rounded bg-emerald-400"></div></div></div>
+              <div class="flex flex-1 flex-col p-5"><h3 class="text-base font-semibold tracking-[-.03em]">Project 02: Local Radius Paid-Ad &amp; Conversion Funnel</h3><div class="mt-4 flex flex-wrap gap-1.5"><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Built in 36 Hours</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Meta Pixel + CAPI</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Mobile-First UI</span></div><p class="mt-4 flex-1 text-sm leading-6 text-zinc-400">Dedicated paid-social landing page and local radius conversion funnel built to turn cold ad clicks into tracked, high-ticket client bookings.</p><a href="#intake" class="mt-5 inline-flex items-center gap-2 border-t border-zinc-800 pt-4 text-xs font-medium text-zinc-200 transition hover:text-emerald-300">View Funnel Spec <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="surface-card flex flex-col overflow-hidden rounded-lg">
+              <div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-950/70 px-4 py-3"><span class="h-2 w-2 rounded-full bg-red-500/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-emerald-500/70"></span><div class="mono-label ml-3 min-w-0 flex-1 truncate rounded bg-zinc-900 px-3 py-1.5 text-[9px] text-zinc-500">streamstate-core <span class="text-zinc-700">//</span> Low-Latency Architecture</div></div>
+              <div class="preview-three relative flex h-48 items-center justify-center overflow-hidden p-5"><div class="w-full rounded-lg border border-indigo-200/15 bg-[#0b0b12]/90 p-4 font-mono shadow-2xl"><div class="mb-4 flex items-center justify-between text-[8px] text-zinc-500"><span>STREAM / CORE</span><span class="text-emerald-400">● SYSTEM ONLINE</span></div><div class="flex h-16 items-end gap-1.5"><span class="h-7 flex-1 rounded-t bg-indigo-400/30"></span><span class="h-10 flex-1 rounded-t bg-indigo-400/40"></span><span class="h-8 flex-1 rounded-t bg-indigo-400/50"></span><span class="h-14 flex-1 rounded-t bg-indigo-300/70"></span><span class="h-11 flex-1 rounded-t bg-indigo-400/50"></span><span class="h-16 flex-1 rounded-t bg-indigo-300/80"></span><span class="h-12 flex-1 rounded-t bg-indigo-400/40"></span><span class="h-14 flex-1 rounded-t bg-indigo-300/60"></span></div></div></div>
+              <div class="flex flex-1 flex-col p-5"><h3 class="text-base font-semibold tracking-[-.03em]">Project 03: StreamState Core — High-Performance Systems &amp; Web UI</h3><div class="mt-4 flex flex-wrap gap-1.5"><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Python &amp; Modern Web Stack</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Real-Time Benchmarks</span><span class="mono-label rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-400">Clean UI</span></div><p class="mt-4 flex-1 text-sm leading-6 text-zinc-400">Performance-engineered software architecture and clean technical dashboard UI demonstrating deep full-stack and systems capability.</p><a href="#intake" class="mt-5 inline-flex items-center gap-2 border-t border-zinc-800 pt-4 text-xs font-medium text-zinc-200 transition hover:text-emerald-300">View Technical Breakdown <span aria-hidden="true">↗</span></a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline" class="border-t border-zinc-900 bg-zinc-950/35">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="mb-10"><p class="section-kicker">03 / The No-Meeting Handoff Pipeline</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A clean handoff. No calendar ping-pong.</h2></div>
+          <div class="grid gap-3 md:grid-cols-3">
+            <article class="surface-card rounded-lg p-6"><span class="mono-label text-[10px] text-emerald-400">STEP 01 // Drop the Spec (3 Mins)</span><h3 class="mt-7 text-lg font-semibold tracking-[-.04em]">Send the essentials.</h3><p class="mt-3 text-sm leading-6 text-zinc-400">Send over your client's brand assets, Figma file (or 2 reference sites), and target launch date. No 2-hour discovery calls required.</p></article>
+            <article class="surface-card rounded-lg p-6"><span class="mono-label text-[10px] text-emerald-400">STEP 02 // 48-Hour Staging Link</span><h3 class="mt-7 text-lg font-semibold tracking-[-.04em]">Review a real build.</h3><p class="mt-3 text-sm leading-6 text-zinc-400">I spin up the custom build on a private staging URL and record a quick walkthrough within 48–72 hours for rapid revisions.</p></article>
+            <article class="surface-card rounded-lg p-6"><span class="mono-label text-[10px] text-emerald-400">STEP 03 // Pixel Check &amp; Keys Handoff</span><h3 class="mt-7 text-lg font-semibold tracking-[-.04em]">Launch with confidence.</h3><p class="mt-3 text-sm leading-6 text-zinc-400">I connect the client's custom domain, verify all tracking events are firing green, and hand over the finished asset.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="border-t border-zinc-900">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="mb-10"><p class="section-kicker">04 / Transparent Wholesale Rates</p><div class="mt-3 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><h2 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">Clear cost. Room to grow.</h2><p class="max-w-md text-sm leading-6 text-zinc-500">Flat partner pricing lets you scope confidently, protect your margin, and deliver without adding a full-time developer.</p></div></div>
+          <div class="surface-card rounded-xl p-5 sm:p-7">
+            <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start"><div><p class="mono-label text-[10px] font-medium tracking-[.1em] text-zinc-300">AGENCY MARKUP CALCULATOR</p><p class="mt-2 text-xs text-zinc-500">Estimate monthly margin at a 2.5×–3× agency markup.</p></div><span class="mono-label text-[9px] text-zinc-600">BASED ON $1,500 FULL 5-PAGE SITE</span></div>
+            <div class="mt-6 grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+              <div><div class="mb-3 flex items-center justify-between"><label for="build-count" class="text-sm font-medium text-zinc-300">Client Builds / Month</label><output id="build-count-output" for="build-count" class="mono-label rounded border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-xs text-white">3</output></div><input id="build-count" type="range" min="1" max="10" value="3" step="1" class="h-1.5 w-full cursor-pointer accent-emerald-500" aria-describedby="calculator-note"><div class="mono-label mt-2 flex justify-between text-[9px] text-zinc-600"><span>1 BUILD</span><span>10 BUILDS</span></div><p id="calculator-note" class="mt-4 text-[11px] leading-5 text-zinc-600">Profit estimate is gross revenue less wholesale build cost; excludes your operating expenses.</p></div>
+              <div class="grid gap-3 sm:grid-cols-2"><div class="rounded-lg border border-zinc-800 bg-zinc-950/70 p-4"><span class="mono-label text-[9px] tracking-[.08em] text-zinc-500">YOUR WHOLESALE COST</span><output id="wholesale-total" class="mono-label mt-3 block text-2xl font-medium tracking-[-.06em] text-white" aria-live="polite">$4,500</output></div><div class="rounded-lg border border-emerald-900/60 bg-emerald-950/20 p-4"><span class="mono-label text-[9px] tracking-[.08em] text-emerald-300/80">YOUR ESTIMATED AGENCY NET PROFIT</span><output id="profit-total" class="mono-label mt-3 block text-xl font-medium tracking-[-.06em] text-emerald-300" aria-live="polite">$6,750–$9,000</output></div></div>
+            </div>
+          </div>
+          <div class="mt-5 grid items-stretch gap-4 lg:grid-cols-3">
+            <article class="surface-card flex flex-col rounded-xl p-5 sm:p-6">
+              <div class="flex items-start justify-between gap-3"><h3 class="text-lg font-semibold tracking-[-.04em]">Paid-Ad / Drop Landing Page</h3><span class="mono-label shrink-0 text-[9px] text-zinc-500">48 HOURS</span></div>
+              <div class="mt-5"><p class="mono-label text-3xl font-medium tracking-[-.06em]">$750</p><span class="mt-3 inline-flex rounded border border-emerald-900/70 bg-emerald-950/30 px-2.5 py-1.5 text-[10px] font-medium text-emerald-300">Agencies Charge $2,000–$3,000+</span></div>
+              <ul class="mt-6 flex-1 space-y-3 border-t border-zinc-800 pt-5 text-sm text-zinc-400"><li class="flex gap-2"><span class="text-emerald-400">✓</span>1 Ultra-Fast Custom Page</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Mobile-First Conversion Layout</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Lead Form or Checkout Flow</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Meta/TikTok Pixel Structure</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Staging Link in 48 Hours</li></ul>
+              <a href="#intake" data-package="Paid-Ad / Drop Landing Page" class="package-link mt-7 inline-flex items-center justify-center rounded-md border border-zinc-700 px-4 py-3 text-center text-xs font-semibold text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-800">First Test Build: 50% Off ($375) <span class="ml-2">→</span></a>
+            </article>
+            <article class="relative flex flex-col rounded-xl border border-emerald-700/70 bg-[#101411] p-5 shadow-[0_0_40px_rgba(16,185,129,.06)] sm:p-6">
+              <span class="mono-label absolute -top-3 left-5 rounded bg-emerald-500 px-2.5 py-1 text-[9px] font-semibold tracking-[.06em] text-black">MOST POPULAR OVERFLOW PACKAGE</span>
+              <div class="mt-2 flex items-start justify-between gap-3"><h3 class="text-lg font-semibold tracking-[-.04em]">Full 5-Page Business Site</h3><span class="mono-label shrink-0 text-[9px] text-zinc-500">5 DAYS</span></div>
+              <div class="mt-5"><p class="mono-label text-3xl font-medium tracking-[-.06em]">$1,500</p><span class="mt-3 inline-flex rounded border border-emerald-900/70 bg-emerald-950/30 px-2.5 py-1.5 text-[10px] font-medium text-emerald-300">Agencies Charge $4,500–$6,000+</span></div>
+              <ul class="mt-6 flex-1 space-y-3 border-t border-zinc-800 pt-5 text-sm text-zinc-400"><li class="flex gap-2"><span class="text-emerald-400">✓</span>Up to 5 Custom Pages</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Responsive Industrial/Modern UI</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>CRM &amp; Webhook Ready</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Technical Local SEO Structure</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>99/100 Performance Target</li></ul>
+              <a href="#intake" data-package="Full 5-Page Business Site" class="package-link mt-7 inline-flex items-center justify-center rounded-md bg-white px-4 py-3 text-center text-xs font-semibold text-black transition hover:bg-zinc-200">Select Package <span class="ml-2">→</span></a>
+            </article>
+            <article class="surface-card flex flex-col rounded-xl p-5 sm:p-6">
+              <div class="flex items-start justify-between gap-3"><h3 class="text-lg font-semibold tracking-[-.04em]">Custom DTC Storefront / Web App</h3><span class="mono-label shrink-0 text-[9px] text-zinc-500">7 DAYS</span></div>
+              <div class="mt-5"><p class="mono-label text-3xl font-medium tracking-[-.06em]">$2,500</p><span class="mt-3 inline-flex rounded border border-emerald-900/70 bg-emerald-950/30 px-2.5 py-1.5 text-[10px] font-medium text-emerald-300">Agencies Charge $6,500–$10,000+</span></div>
+              <ul class="mt-6 flex-1 space-y-3 border-t border-zinc-800 pt-5 text-sm text-zinc-400"><li class="flex gap-2"><span class="text-emerald-400">✓</span>Full Product, Collection &amp; Cart UI</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Custom Domain &amp; Email Routing Setup</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Full Analytics &amp; Event Architecture</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>High-Traffic Drop Optimization</li><li class="flex gap-2"><span class="text-emerald-400">✓</span>Direct Slack Access</li></ul>
+              <a href="#intake" data-package="Custom DTC Storefront / Web App" class="package-link mt-7 inline-flex items-center justify-center rounded-md border border-zinc-700 px-4 py-3 text-center text-xs font-semibold text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-800">Select Package <span class="ml-2">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="intake" class="border-t border-zinc-900 bg-zinc-950/35">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="mb-10 max-w-2xl"><p class="section-kicker">05 / Partner Intake</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A fast intro or a build-ready brief.</h2><p class="mt-4 text-sm leading-6 text-zinc-500">Choose a time to connect, or send the essentials directly. This visual preview is frontend-only and does not transmit or store your information.</p></div>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <section class="surface-card rounded-xl p-5 sm:p-7" aria-labelledby="calendar-title">
+              <div class="flex items-start justify-between gap-4"><div><p class="mono-label text-[9px] tracking-[.1em] text-emerald-400">10-MIN PARTNER INTRO — VISUAL CALENDAR UI</p><h3 id="calendar-title" class="mt-3 text-lg font-semibold tracking-[-.04em]">Nathaniel Shatzkamer — 15-Min White-Label Partner Intro</h3></div><span class="mono-label shrink-0 rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-500">EST</span></div>
+              <p class="mt-2 text-xs text-zinc-500">Pick a weekday and a time that works for you.</p>
+              <div class="mt-6"><p class="mono-label mb-3 text-[9px] tracking-[.08em] text-zinc-500">SELECT A DAY</p><div class="grid grid-cols-5 gap-2" role="group" aria-label="Select a weekday"><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="true">Mon</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Tue</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Wed</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Thu</button><button type="button" class="day-button rounded-md border border-zinc-800 bg-zinc-950 px-2 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">Fri</button></div></div>
+              <div class="mt-6"><p class="mono-label mb-3 text-[9px] tracking-[.08em] text-zinc-500">AVAILABLE TIMES</p><div class="grid gap-2 sm:grid-cols-3" role="group" aria-label="Select a time"><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">10:00 AM EST</button><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">1:30 PM EST</button><button type="button" class="calendar-slot rounded-md border border-zinc-800 bg-zinc-950 px-3 py-3 text-xs text-zinc-400 transition hover:border-zinc-600" aria-pressed="false">4:00 PM EST</button></div></div>
+              <p id="calendar-selection" class="mono-label mt-5 min-h-5 text-[10px] text-zinc-500" aria-live="polite">No time selected yet.</p><p class="mt-3 border-t border-zinc-800 pt-4 text-[10px] leading-5 text-zinc-600">Booking preview only. No appointment is reserved by selecting a slot.</p>
+            </section>
+            <section class="surface-card rounded-xl p-5 sm:p-7" aria-labelledby="spec-title">
+              <p class="mono-label text-[9px] tracking-[.1em] text-emerald-400">DIRECT BUILD SPEC SHEET — VISUAL INTAKE UI</p><h3 id="spec-title" class="mt-3 text-lg font-semibold tracking-[-.04em]">Tell me what you're building.</h3>
+              <form id="intake-form" class="mt-5 space-y-4">
+                <div><label for="agency" class="mb-1.5 block text-xs font-medium text-zinc-300">Your Name &amp; Agency</label><input id="agency" name="agency" autocomplete="organization-title" required class="input-field w-full rounded-md px-3 py-2.5 text-sm text-white placeholder:text-zinc-700" placeholder="Name / Agency"></div>
+                <div><label for="contact" class="mb-1.5 block text-xs font-medium text-zinc-300">Email or Slack Handle</label><input id="contact" name="contact" autocomplete="email" required class="input-field w-full rounded-md px-3 py-2.5 text-sm text-white placeholder:text-zinc-700" placeholder="you@agency.com or @handle"></div>
+                <div><label for="package" class="mb-1.5 block text-xs font-medium text-zinc-300">Package Tier</label><select id="package" name="package" required class="input-field w-full rounded-md px-3 py-2.5 text-sm text-zinc-300"><option value="" selected disabled>Select a package</option><option>Paid-Ad / Drop Landing Page</option><option>Full 5-Page Business Site</option><option>Custom DTC Storefront / Web App</option><option>Not sure yet</option></select></div>
+                <div><label for="reference" class="mb-1.5 block text-xs font-medium text-zinc-300">Client Reference / Figma Links</label><textarea id="reference" name="reference" rows="3" class="input-field w-full resize-y rounded-md px-3 py-2.5 text-sm text-white placeholder:text-zinc-700" placeholder="Share links or a short project overview"></textarea></div>
+                <div><label for="target-date" class="mb-1.5 block text-xs font-medium text-zinc-300">Target Turnaround Date</label><input id="target-date" name="target-date" type="date" class="input-field w-full rounded-md px-3 py-2.5 text-sm text-zinc-300"></div>
+                <button type="submit" class="inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200">Lock In Build Slot <span class="ml-2" aria-hidden="true">→</span></button>
+                <div id="form-confirmation" class="hidden rounded-md border border-emerald-800/70 bg-emerald-950/35 px-4 py-3 text-sm text-emerald-200" role="status" aria-live="polite">Spec preview complete. This demo did not send or store your details.</div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-zinc-900"><div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-7 sm:flex-row sm:items-center sm:justify-between sm:px-8"><p class="text-[11px] text-zinc-500">© 2026 Nathaniel Shatzkamer (nathanielshatzkamer.com). All rights reserved.</p><p class="mono-label text-[9px] tracking-[.1em] text-zinc-600">BUILT WITH ZERO BLOAT // BOSTON, MA</p></div></footer>
+    <script>
+      const buildCount = document.querySelector("#build-count");
+      const buildCountOutput = document.querySelector("#build-count-output");
+      const wholesaleTotal = document.querySelector("#wholesale-total");
+      const profitTotal = document.querySelector("#profit-total");
+      const currency = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+      function updateCalculator() {
+        const builds = Number(buildCount.value);
+        const wholesale = builds * 1500;
+        buildCountOutput.value = String(builds);
+        wholesaleTotal.value = currency.format(wholesale);
+        profitTotal.value = `${currency.format(wholesale * 1.5)}–${currency.format(wholesale * 2)}`;
+      }
+      buildCount.addEventListener("input", updateCalculator);
+      updateCalculator();
+
+      const dayButtons = [...document.querySelectorAll(".day-button")];
+      const timeButtons = [...document.querySelectorAll(".calendar-slot")];
+      const calendarSelection = document.querySelector("#calendar-selection");
+      let selectedDay = "Mon";
+      let selectedTime = "";
+      function updateCalendarSelection() {
+        calendarSelection.textContent = selectedTime ? `Preview selected: ${selectedDay}, ${selectedTime}` : "No time selected yet.";
+      }
+      dayButtons.forEach((button) => button.addEventListener("click", () => {
+        dayButtons.forEach((day) => day.setAttribute("aria-pressed", String(day === button)));
+        selectedDay = button.textContent;
+        updateCalendarSelection();
+      }));
+      timeButtons.forEach((button) => button.addEventListener("click", () => {
+        timeButtons.forEach((slot) => slot.setAttribute("aria-pressed", String(slot === button)));
+        selectedTime = button.textContent;
+        updateCalendarSelection();
+      }));
+      document.querySelectorAll(".package-link").forEach((link) => link.addEventListener("click", () => {
+        document.querySelector("#package").value = link.dataset.package;
+      }));
+      const intakeForm = document.querySelector("#intake-form");
+      intakeForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!intakeForm.reportValidity()) return;
+        document.querySelector("#form-confirmation").classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
