@@ -162,7 +162,7 @@
 
       <section id="intake" class="border-t border-zinc-900 bg-zinc-950/35">
         <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div class="mb-10 max-w-2xl"><p class="section-kicker">04 / Partner Connection</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A fast intro or a build-ready brief.</h2><p class="mt-4 text-sm leading-6 text-zinc-500">Choose a time to connect, or preview a build-ready brief. This frontend-only form does not transmit or store your information.</p></div>
+          <div class="mb-10 max-w-2xl"><p class="section-kicker">04 / Partner Connection</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A fast intro or a build-ready brief.</h2><p class="mt-4 text-sm leading-6 text-zinc-500">Choose a time to connect, or send a build-ready brief directly to Nathaniel.</p></div>
           <div class="grid gap-4 lg:grid-cols-2">
             <section class="surface-card rounded-xl p-5 sm:p-7" aria-labelledby="calendar-title">
               <div class="flex items-start justify-between gap-4"><div><p class="mono-label text-[9px] tracking-[.1em] text-emerald-400">10-MIN PARTNER INTRO — VISUAL CALENDAR UI</p><h3 id="calendar-title" class="mt-3 text-lg font-semibold tracking-[-.04em]">Nathaniel Shatzkamer — 15-Min White-Label Partner Intro</h3></div><span class="mono-label shrink-0 rounded border border-zinc-800 px-2 py-1 text-[9px] text-zinc-500">EST</span></div>
@@ -179,8 +179,8 @@
                 <div><label for="package" class="mb-1.5 block text-xs font-medium text-zinc-300">Package Tier</label><select id="package" name="package" required class="input-field w-full rounded-md px-3 py-2.5 text-sm text-zinc-300"><option value="" selected disabled>Select a package</option><option>Paid-Ad / Drop Landing Page</option><option>Full 5-Page Business Site</option><option>Custom DTC Storefront / Web App</option><option>Not sure yet</option></select></div>
                 <div><label for="reference" class="mb-1.5 block text-xs font-medium text-zinc-300">Client Reference / Figma Links</label><textarea id="reference" name="reference" rows="3" class="input-field w-full resize-y rounded-md px-3 py-2.5 text-sm text-white placeholder:text-zinc-700" placeholder="Share links or a short project overview"></textarea></div>
                 <div><label for="target-date" class="mb-1.5 block text-xs font-medium text-zinc-300">Target Turnaround Date</label><input id="target-date" name="target-date" type="date" class="input-field w-full rounded-md px-3 py-2.5 text-sm text-zinc-300"></div>
-                <button type="submit" class="inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200">Lock In Build Slot <span class="ml-2" aria-hidden="true">→</span></button>
-                <div id="form-confirmation" class="hidden rounded-md border border-emerald-800/70 bg-emerald-950/35 px-4 py-3 text-sm text-emerald-200" role="status" aria-live="polite">Spec preview complete. This demo did not send or store your details.</div>
+                <button type="submit" class="inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200">Send Build Brief <span class="ml-2" aria-hidden="true">→</span></button>
+                <div id="form-confirmation" class="hidden rounded-md border border-emerald-800/70 bg-emerald-950/35 px-4 py-3 text-sm text-emerald-200" role="status" aria-live="polite">Opening your email app with the build brief ready to send.</div>
               </form>
             </section>
           </div>
@@ -230,7 +230,23 @@
       intakeForm.addEventListener("submit", (event) => {
         event.preventDefault();
         if (!intakeForm.reportValidity()) return;
+        const data = new FormData(intakeForm);
+        const subject = `New build inquiry: ${data.get("package")}`;
+        const body = [
+          "New build inquiry from nathanielshatzkamer.com",
+          "",
+          `Name / Agency: ${data.get("agency")}`,
+          `Email / Slack: ${data.get("contact")}`,
+          `Package: ${data.get("package")}`,
+          `Target date: ${data.get("target-date") || "Not specified"}`,
+          `Calendar preview: ${selectedTime ? `${selectedDay}, ${selectedTime}` : "No time selected"}`,
+          "",
+          "Reference / project overview:",
+          data.get("reference") || "Not provided"
+        ].join("\n");
+
         document.querySelector("#form-confirmation").classList.remove("hidden");
+        window.location.href = `mailto:nateshatz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       });
     </script>
   </body>
